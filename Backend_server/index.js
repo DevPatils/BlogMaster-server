@@ -12,7 +12,9 @@ app.use(cors());
 // These are the routes that we have created in the Backend/routes folder:
 app.use('/api/user',userRouter );
 app.use('/api/post', postRouter);
-
+app.get("/", async (req,res)=>{
+  res.json("hello from backend")
+})
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
